@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@techiediaries/ngx-qrcode": "^9.1.0"
+  }
+}

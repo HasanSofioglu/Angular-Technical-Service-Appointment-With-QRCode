@@ -1,0 +1,36 @@
+
+
+<div class="container">
+	
+	<div class="screen">
+		<div class="screen__content">
+			
+			<form #loginForm="ngForm" (ngSubmit)="login()" class="login">
+    		
+    		<div class="login__field">
+     		   <input type="text" [(ngModel)]="model.userName" name="userName"
+    		    class="login__input" placeholder="User name / Email">
+   			 </div>
+    		<div class="login__field">
+     		   <input type="password" [(ngModel)]="model.password" name="password"
+     		   class="login__input" placeholder="Password">
+   			 </div>
+				
+    		<button class="button login__submit" type="submit">Login Now</button>
+			
+			<div class="social-login">
+				<a href="#">Main Page</a>
+				<br>
+			<img style="width: 150px;" src="../assets/img/removvlogo1.png" class="logo">
+   			 <p class="mt-5 mb-3 text-muted">&copy;2017-2021</p> </div>
+			</form> 
+			
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+</div>
+</div>

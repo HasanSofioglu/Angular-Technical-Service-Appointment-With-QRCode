@@ -1,0 +1,153 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Google Fonts Link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Line Awesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="form.component.css"
+    />
+     </head>
+  <body>
+    <br>
+    <form [formGroup]="fixAddForm" (ngSubmit)="add()">
+    <div class="main-container">
+      <h2>What's your device?</h2>
+         <div class="radio-buttons" >
+        
+          <label class="custom-radio">
+          <input type="radio" name="radio1"  formControlName="deviceModel1"  value="1" checked/>
+          
+          <span class="radio-btn"
+            ><i class="las la-check"></i>
+            <div class="hobbies-icon">
+            <img style="width: 40px;" src="../assets/img/phone.png" class="phone">
+              <h3>Smart Phone</h3>
+            </div>
+          </span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="radio1" formControlName="deviceModel1"  value="2" />
+          <span class="radio-btn"
+            ><i class="las la-check"></i>
+            <div class="hobbies-icon">
+              <img style="width: 50px;" src="../assets/img/tablet.png" class="tablet">
+              <h3>Tablet</h3>
+            </div>
+          </span>
+        </label>
+        <label class="custom-radio">
+          <input  type="radio" name="radio1" formControlName="deviceModel1"  value="3" />
+          <span class="radio-btn"
+            ><i class="las la-check"></i>
+            <div class="hobbies-icon">
+              <img style="width: 45px;" src="../assets/img/smartwatch.png" class="watch">
+              <h3>Smart Watch</h3>
+            </div>
+          </span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="radio1" formControlName="deviceModel1" value="4" />
+          <span class="radio-btn"
+            ><i class="las la-check"></i>
+            <div class="hobbies-icon">
+              <img style="width: 45px;" src="../assets/img/other.png" class="other">
+              <h3>Other</h3>
+            </div>
+          </span>
+        </label>
+        <br>
+   
+        <br>
+        <br>
+        <h2>What's your device problem?</h2>
+        <div class="radio-buttonss" >
+          
+            <label class="custom-radio" >
+            <input type="radio" name="radio"  formControlName="deviceModel2" value=5 checked/>
+           
+            <span class="radio-btn"
+              ><i class="las la-check"></i>
+              <div class="hobbies-icon">
+              <img style="width: 40px;" src="../assets/img/screenbroke.png" class="brokeScreen">
+                <h3>Screen</h3>
+              </div>
+            </span>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="radio" formControlName="deviceModel2" value=6 />
+            <span class="radio-btn"
+              ><i class="las la-check"></i>
+              <div class="hobbies-icon">
+                <img style="width: 50px;" src="../assets/img/battery.png" class="battery">
+                <h3>Battery</h3>
+              </div>
+            </span>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="radio" formControlName="deviceModel2" value=7/>
+            <span class="radio-btn"
+              ><i class="las la-check"></i>
+              <div class="hobbies-icon">
+                <img style="width: 45px;" src="../assets/img/inproblem.png" class="inproblem">
+                <h3>interior parts</h3>
+              </div>
+            </span>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="radio" formControlName="deviceModel2" value=8/>
+            <span class="radio-btn"
+              ><i class="las la-check"></i>
+              <div class="hobbies-icon">
+                <img style="width: 45px;" src="../assets/img/other.png" class="other">
+                <h3>Other</h3>
+              </div>
+            </span>
+          </label>
+        </div>
+       
+      </div>
+    
+     
+
+      <br>
+      <br>
+ 
+      <div class="form-style-5">
+
+        <fieldset>
+        <legend><span class="number">1</span> Your Info</legend>
+        <input type="text" name="field1"  formControlName="name" placeholder="Your Name *">
+        <input type="email" name="field2"  formControlName="email" placeholder="Your Email *">
+        <input type="text" name="field3" formControlName="phoneNumber"   placeholder="Your Phone Number*" > 
+
+        <legend><span class="number">2</span> Device Info</legend>
+        <input type="text" name="field4" formControlName="deviceModel3"  placeholder="Device Model">
+        <input type="text" name="field5" formControlName="deviceimei"  placeholder="Device IMEI Number">
+        <input type="text" name="field6" formControlName="devicePassword"  placeholder="Device Password">
+        <textarea name="field6" formControlName="detailProblem"   placeholder="Detail Your Device Problem"></textarea>
+        </fieldset>
+        
+           <input  type="submit" [disabled]="fixAddForm.invalid"  value="Apply" />
+          
+        
+        
+        </div>
+       
+    </div>
+
+  </form>
+    <br>
+    <br>
+   
+     
+  </body>
+  
+</html>

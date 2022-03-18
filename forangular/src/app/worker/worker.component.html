@@ -1,0 +1,66 @@
+
+
+    <div class="banner">
+        <div class="content">
+           
+            <div class="wrap">
+               <div class="search">
+                  <input type="text"  class="form-control" id="productName"  placeholder="Ürün Ara" [(ngModel)] ="filterText"  placeholder="Write your referans code">
+                  <button type="submit" class="searchButton">
+                   <img style="width: 25px;" src="../assets/img/search.png" class="logo">
+                   <small *ngIf="filterText">
+                    <h6>Şu anda <strong>{{filterText}}</strong> aradınız</h6> 
+                   </small>
+                 </button>
+               </div>
+            </div>
+       </div>
+        <div class="navbar">
+            <img style="width: 250px;" src="../assets/img/removvlogo1.png" class="logo">
+           
+            <ul>
+                <li><a href="login">Log out</a></li>
+            </ul>
+        </div>
+       <html lang="en">
+
+<head>
+  <title>Harvest vase</title>
+  <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="row"></div>
+        <ng-template #noProduct>
+            <div class="alert alert-primary" role="alert">
+              in here dosent have a form
+            </div>
+            
+        </ng-template>
+        <div *ngFor="let form of forms | formFilter:filterText" class="card" style="width: 22rem;">
+          
+          <div class="card-body">
+            <div class="row">
+                 <div class="card-body">
+                   <h5 class="card-title">{{form.name | uppercase}} {{form.phoneNumber}}</h5>
+                   <p class="card-text">{{form.deviceModel1}}</p>
+                  <button>Edit</button>
+                 </div>
+      
+           </div>
+
+          </div>
+       
+        </div>
+  
+
+</body>
+
+</html>
+   
+    </div>
+ 
+   
+
+    
